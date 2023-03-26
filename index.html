@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="\cartoon\css\styles.css">
+    <title>cartoons</title>
+     <link rel="icon" type="image/x-icon" href="S:\cartoon\css\sk.png">
+  </head>
+  <body>
+    <header>
+  <div class="header-container">
+    <h1 class = 'header-h1'>Cartoons</h1>
+    <p style ="margin:0px; color: burlywood; font-family: fantasy;">let's have the note of timeing</p>
+  </div>
+  <a style = 'margin-left:30px;'href="https://www.freepnglogos.com/pics/doraemon" title="Image from freepnglogos.com"><img src="https://www.freepnglogos.com/uploads/doraemon-png/doraemon-logo-movies-hindi-dubbed-download-34.png" height="auto" width="200" alt="doraemon logo png, doraemon clipart" /></a>
+    <img style='    margin-left: 40px;
+    margin-top: 3px;
+    width: 166px;
+    height: 162px;'src="S:\cartoon\css\pngegg.png" alt="">
+      <img style='   margin-left: 34px;
+    margin-bottom: 3px;
+    width: 179px;
+    height: 150px;'src="S:\cartoon\css\pngwing.com.png" alt="">
+    <img style='  margin-left: 28px;
+    margin-top: 6px;
+    width: 169px;
+    height: 143px;'src="S:\cartoon\css\4-2-animation-png-pic.png" alt="">
+    <img style=' margin-left: 28px;
+    margin-top: 6px;
+    width: 174px;
+    height: 159px;
+}'src="S:\cartoon\css\4-2-disney-princesses-picture_600x600.png" alt="">
+    <img style='  margin-left: 28px;
+    margin-top: 6px;
+    width: 143px;
+    height: 128px;'src="S:\cartoon\css\6-2-pokemon-png-hd.png" alt="">
+    </header>
+    <div class="menu-bar">
+     <h3 onclick="homeBtnFun('home-container','channel-container','currentShow-container')">HOME</h3>
+     <h3 onclick="homeBtnFun('channel-container','home-container','currentShow-container')">CHANNEL</h3>
+     <h3 onclick="homeBtnFun('currentShow-container','home-container','channel-container')">CURRENT LIST</h3>
+    </div>
+    <div class="home-container">
+
+      <div  class="home-container-forward smooth">
+
+         <img class = 'img' src="S:\cartoon\css\cn.jpg" alt="" id='last-clone' >
+           <img class = 'img' src="S:\cartoon\css\disnep.jpg" alt="">
+           <img class = 'img' src="S:\cartoon\css\pogo.png" alt="">
+           <img class = 'img' src="S:\cartoon\css\chutti.jpg" alt="">
+           <img class = 'img' src="S:\cartoon\css\hungamanew.png" alt="">
+
+      </div>
+      <div class="home-container-reverse smooth">
+        <img class = 'img' src="S:\cartoon\css\doremonwall" alt="" >
+          <img class = 'img' src="S:\cartoon\css\shinchanwall.jpg" alt="">
+          <img class = 'img' src="S:\cartoon\css\jackiejanwall" alt="">
+          <img class = 'img' src="S:\cartoon\css\princesswall.jpg" alt="">
+          <img class = 'img' src="S:\cartoon\css\pickachuwall.jpg" alt="">
+      </div>
+    </div>
+        <div class="channel-container hide">
+    <div class="channel-img-container">
+      <img onclick="channelFun('Cartoon Network')" class = 'img-channel'src="S:\cartoon\css\cn.jpg" alt="" >
+        <img onclick="channelFun('disnep')" class = 'img-channel' src="S:\cartoon\css\disnep.jpg" alt="">
+        <img  onclick="channelFun('POGO')" class = 'img-channel' src="S:\cartoon\css\pogo.png" alt="">
+        <img onclick="channelFun('chutti')"class = 'img-channel' src="S:\cartoon\css\chutti.jpg" alt="">
+        <img onclick="channelFun('hungama')"class = 'img-channel' src="S:\cartoon\css\ungama.jpg" alt="">
+    </div>
+    <script type="text/javascript">
+    function channelFun(type)
+    {
+      if(type == 'Cartoon Network')
+      {
+        document.getElementById('c-heading').textContent = 'CARTOON NETWORK'
+        document.getElementById('cartoonNetwork').classList.remove('hide');
+        document.getElementById('POGO').classList.add('hide');
+        document.getElementById('disnep').classList.add('hide');
+        document.getElementById('chutti').classList.add('hide');
+        document.getElementById('hungama').classList.add('hide');
+      }
+      else if(type == 'disnep')
+      {
+        document.getElementById('D-heading').textContent = 'DISNEY';
+        document.getElementById('disnep').classList.remove('hide');
+        document.getElementById('POGO').classList.add('hide');
+        document.getElementById('cartoonNetwork').classList.add('hide');
+        document.getElementById('chutti').classList.add('hide');
+        document.getElementById('hungama').classList.add('hide');
+      }
+      else if(type == 'POGO')
+      {
+        document.getElementById('P-heading').textContent = 'POGO';
+        document.getElementById('POGO').classList.remove('hide');
+        document.getElementById('disnep').classList.add('hide');
+        document.getElementById('cartoonNetwork').classList.add('hide');
+        document.getElementById('chutti').classList.add('hide');
+        document.getElementById('hungama').classList.add('hide');
+      }
+      else if(type == 'chutti')
+      {
+        document.getElementById('Ch-heading').textContent = 'CHUTTI';
+        document.getElementById('chutti').classList.remove('hide');
+        document.getElementById('POGO').classList.add('hide');
+        document.getElementById('cartoonNetwork').classList.add('hide');
+        document.getElementById('disnep').classList.add('hide');
+        document.getElementById('hungama').classList.add('hide');
+      }
+      else if(type == 'hungama')
+      {
+        document.getElementById('H-heading').textContent = 'HUNGAMA';
+        document.getElementById('hungama').classList.remove('hide');
+        document.getElementById('POGO').classList.add('hide');
+        document.getElementById('cartoonNetwork').classList.add('hide');
+        document.getElementById('chutti').classList.add('hide');
+        document.getElementById('disnep').classList.add('hide');
+      }
+    }
+  const cnChannel =    [{name:'Courage The Cowardly Dog',dy:[{startTime:'00.00',endTime:"01.00"},{startTime:'23:30',endTime:"24:00"}]},
+     {name:'The Tom & Jerry Show',dy:[{startTime:'1:00',endTime:"2:00"},{startTime:'2:00',endTime:"3:00"},{startTime:'3:00',endTime:"4:00"},
+   {startTime:'4:00',endTime:"4:30"},{startTime:'5:30',endTime:"6:00"}]},
+   {name:'Grizzy And The Lemmings',dy:[{startTime:'7:00',endTime:"7:30"},{startTime:'7:30',endTime:"8:00"},{startTime:'8:00',endTime:"8:30"}]},
+  {name:'Lamput',dy:[{startTime:'8:30',endTime:"9:00"},{startTime:'9:30',endTime:"10:00"},{startTime:'10:00',endTime:"10:30"}]},
+{name:'Teen Titans Go! Special',dy:[{startTime:'11:30',endTime:"00:30"},{startTime:'00:30',endTime:"13:30"}]},
+{name:'Teen Titans Go!',dy:[{startTime:'13:30',endTime:"14:30"},
+{startTime:'14:30',endTime:"15:30"},{startTime:'15:30',endTime:"16:30"},{startTime:'16:30',endTime:"17:30"},{startTime:'17:30',endTime:"18:30"},
+{startTime:'18:30',endTime:"19:30"},{startTime:'19:30',endTime:"20:30"},{startTime:'20:30',endTime:"21:30"}]}];
+
+const pogoChannel =    [{name:'Super Bheem',dy:[{startTime:'00:00',endTime:"01:00"},{startTime:'01:00',endTime:"02:00"},
+{startTime:'02:00',endTime:"05:00"}]},{name:'Chhota Bheem',dy:[{startTime:'06:00',endTime:"07:00"},{startTime:'08:15',endTime:"11:30"},{startTime:'23:15',endTime:"23:30"}]},
+{name:'The Tom & Jerry Show',dy:[{startTime:'07:00',endTime:"08:00"}]},{name:'Little Singham Movies',dy:[{startTime:'21:00',endTime:"24:15"},{startTime:'16:00',endTime:"19:15"}]},
+{name:'Titoo',dy:[{startTime:'13:45',endTime:"16:00"}]}
+];
+
+const chuttiChannel =    [{name:'Varuthapadatha Karadi Sangam Adventures',dy:[{startTime:'00:00',endTime:"02:00"},{startTime:'04:00',endTime:"07:00"},
+{startTime:'08:00',endTime:"09:00"},{startTime:'15:00',endTime:"16:00"}]},{name:'Chhota Bheem',dy:[{startTime:'06:00',endTime:"07:00"},{startTime:'08:15',endTime:"11:30"},{startTime:'23:15',endTime:"23:30"}]},
+{name:'The Tom & Jerry Show',dy:[{startTime:'07:00',endTime:"08:00"}]},{name:'Little Singham Movies',dy:[{startTime:'21:00',endTime:"24:15"},{startTime:'16:00',endTime:"19:15"}]},
+{name:'Titoo',dy:[{startTime:'13:45',endTime:"16:00"}]}
+ ];
+ const hungamaChannel =    [{name:'Lucky Man',dy:[{startTime:'00:06',endTime:"00:42"}]},{name:'Supa Strikas',dy:[{startTime:'01:00',endTime:"01:40"}]},
+ {name:'Kiteretsu',dy:[{startTime:'02:00',endTime:"02:43"}]},{name:'Upin & Ipin',dy:[{startTime:'03:05',endTime:"03:52"}]},
+ {name:'Shinchan',dy:[{startTime:'04:05',endTime:"05:00"},{startTime:'05:00',endTime:"06:00"},{startTime:'06:00',endTime:"08:30"},{startTime:'09:00',endTime:"10:00"},
+{startTime:'11:05',endTime:"12:00"},{startTime:'12:05',endTime:"20:00"},{startTime:'22:00',endTime:"23:00"}]},{name:'Hero - Bhakti Hi Shakti Hain',dy:[{startTime:'20:00',endTime:"20:26"}]}
+  ];
+
+  const disneyChannel =    [{name:'Doraemon',dy:[{startTime:'00:00',endTime:"00:30"},{startTime:'06:00',endTime:"09:00"},{startTime:'10:00',endTime:"12:50"},{startTime:'14:50',endTime:"18:30"},
+  {startTime:'18:30',endTime:"18:40"},{startTime:'20:46',endTime:"00:00"}]},{name:'Selfie With Bajrangi',dy:[{startTime:'00:30',endTime:"01:00"},{startTime:'01:00',endTime:"02:00"}]},
+  {name:'Gadget Guru Ganesha',dy:[{startTime:'02:30',endTime:"03:00"},{startTime:'03:00',endTime:"04:00"},{startTime:'04:30',endTime:"05:00"}]},{name:'Moka',dy:[{startTime:'05:30',endTime:"06:00"}]},
+  {name:'Best Of Luck Nikki',dy:[{startTime:'19:56',endTime:"20:18"}]}
+   ];
+
+   const overallShow = [{name:'Courage The Cowardly Dog',dy:[{startTime:'00.00',endTime:"01.00"},{startTime:'23:30',endTime:"24:00"}]},
+      {name:'The Tom & Jerry Show',dy:[{startTime:'1:00',endTime:"2:00"},{startTime:'2:00',endTime:"3:00"},{startTime:'3:00',endTime:"4:00"},
+    {startTime:'4:00',endTime:"4:30"},{startTime:'5:30',endTime:"6:00"}]},
+    {name:'Grizzy And The Lemmings',dy:[{startTime:'7:00',endTime:"7:30"},{startTime:'7:30',endTime:"8:00"},{startTime:'8:00',endTime:"8:30"}]},
+   {name:'Lamput',dy:[{startTime:'8:30',endTime:"9:00"},{startTime:'9:30',endTime:"10:00"},{startTime:'10:00',endTime:"10:30"}]},
+ {name:'Teen Titans Go! Special',dy:[{startTime:'11:30',endTime:"00:30"},{startTime:'00:30',endTime:"13:30"}]},
+ {name:'Teen Titans Go!',dy:[{startTime:'13:30',endTime:"13:30"},{startTime:'13:30',endTime:"14:30"},{startTime:'13:30',endTime:"14:30"},
+ {startTime:'14:30',endTime:"15:30"},{startTime:'15:30',endTime:"16:30"},{startTime:'16:30',endTime:"17:30"},{startTime:'17:30',endTime:"18:30"},
+ {startTime:'18:30',endTime:"19:30"},{startTime:'19:30',endTime:"20:30"},{startTime:'20:30',endTime:"21:30"}]},
+ {name:'Super Bheem',dy:[{startTime:'00:00',endTime:"01:00"},{startTime:'01:00',endTime:"02:00"},
+ {startTime:'02:00',endTime:"05:00"}]},{name:'Chhota Bheem',dy:[{startTime:'06:00',endTime:"07:00"},{startTime:'08:15',endTime:"11:30"},{startTime:'23:15',endTime:"23:30"}]},
+ {name:'The Tom & Jerry Show',dy:[{startTime:'07:00',endTime:"08:00"}]},{name:'Little Singham Movies',dy:[{startTime:'21:00',endTime:"24:15"},{startTime:'16:00',endTime:"19:15"}]},
+ {name:'Titoo',dy:[{startTime:'13:45',endTime:"16:00"}]},
+ {name:'Varuthapadatha Karadi Sangam Adventures',dy:[{startTime:'00:00',endTime:"02:00"},{startTime:'04:00',endTime:"07:00"},
+ {startTime:'08:00',endTime:"09:00"},{startTime:'15:00',endTime:"16:00"}]},{name:'Chhota Bheem',dy:[{startTime:'06:00',endTime:"07:00"},{startTime:'08:15',endTime:"11:30"},{startTime:'23:15',endTime:"23:30"}]},
+ {name:'The Tom & Jerry Show',dy:[{startTime:'07:00',endTime:"08:00"}]},{name:'Little Singham Movies',dy:[{startTime:'21:00',endTime:"24:15"},{startTime:'16:00',endTime:"19:15"}]},
+ {name:'Titoo',dy:[{startTime:'13:45',endTime:"16:00"}]},
+ {name:'Lucky Man',dy:[{startTime:'00:06',endTime:"00:42"}]},{name:'Supa Strikas',dy:[{startTime:'01:00',endTime:"01:40"}]},
+ {name:'Kiteretsu',dy:[{startTime:'02:00',endTime:"02:43"}]},{name:'Upin & Ipin',dy:[{startTime:'03:05',endTime:"03:52"}]},
+ {name:'Shinchan',dy:[{startTime:'04:05',endTime:"05:00"},{startTime:'05:00',endTime:"06:00"},{startTime:'06:00',endTime:"08:30"},{startTime:'09:00',endTime:"10:00"},
+ {startTime:'11:05',endTime:"12:00"},{startTime:'12:05',endTime:"20:00"},{startTime:'22:00',endTime:"23:00"}]},{name:'Hero - Bhakti Hi Shakti Hain',dy:[{startTime:'20:00',endTime:"20:26"}]},
+ {name:'Doraemon',dy:[{startTime:'00:00',endTime:"00:30"},{startTime:'06:00',endTime:"09:00"},{startTime:'10:00',endTime:"12:50"},{startTime:'14:50',endTime:"18:30"},
+ {startTime:'18:30',endTime:"18:40"},{startTime:'20:46',endTime:"00:00"}]},{name:'Selfie With Bajrangi',dy:[{startTime:'00:30',endTime:"01:00"},{startTime:'01:00',endTime:"02:00"}]},
+ {name:'Gadget Guru Ganesha',dy:[{startTime:'02:30',endTime:"03:00"},{startTime:'03:00',endTime:"04:00"},{startTime:'04:30',endTime:"05:00"}]},{name:'Moka',dy:[{startTime:'05:30',endTime:"06:00"}]},
+ {name:'Best Of Luck Nikki',dy:[{startTime:'19:56',endTime:"20:18"}]}
+]
+
+ </script>
+    <div class="cartoon-list hide" id = 'cartoonNetwork'>
+      <h2 id ='c-heading'class='w-fnont c-heading' >cartoon</h2>
+
+
+          <script>
+
+              for(var j =0;j<cnChannel.length;j++)
+              {
+
+                var div = document.createElement("div");
+                document.querySelector("#cartoonNetwork #c-heading").after(div);
+                div.setAttribute("id", "cartoon-list-rapper"+j);
+                div.classList.add('cartoon-list-rapper');
+
+                var div = document.createElement("div");
+                document.querySelector("#cartoonNetwork #cartoon-list-rapper"+j).appendChild(div);
+                div.setAttribute("id", "title-arrow-"+j);
+                div.classList.add('title-arrow-container');
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode(cnChannel[j].name));
+                p.classList.add('w-fnont');
+                p.setAttribute("id", "p-"+j);
+                document.querySelector("#cartoonNetwork #title-arrow-"+j).appendChild(p);
+
+                var img = document.createElement("img");
+                img.setAttribute("id", "arrow-"+j);
+                img.classList.add('arrow');
+
+                var ars = "S:"+"\\"+"cartoon"+"\\"+"css"+"\\"+"arrow.jpg";
+                img.src = ars;
+                document.querySelector("#cartoonNetwork #title-arrow-"+j).appendChild(img);
+
+                var div = document.createElement("div");
+                document.querySelector("#cartoonNetwork #title-arrow-"+j).after(div);
+                div.setAttribute("id", "list-dropdown-"+j);
+                div.classList.add('list-dropdown');
+                for(var i =0;i<cnChannel[j].dy.length;i++)
+                {
+                  var div = document.createElement("div");
+                  document.querySelector("#cartoonNetwork #list-dropdown-"+j).appendChild(div);
+                  div.setAttribute("id", "appendDrop-"+i);
+                  div.classList.add('appendDrop');
+
+
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode(cnChannel[j].dy[i].startTime));
+                p.classList.add('w-fnont');
+                document.querySelector("#cartoonNetwork #appendDrop-"+i).appendChild(p);
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode(cnChannel[j].dy[i].endTime));
+                p.classList.add('w-fnont');
+                document.querySelector("#cartoonNetwork #appendDrop-"+i).appendChild(p);
+              }
+            }
+          //  addListenrForArrow();
+
+                </script>
+
+      </div>
+      <div class="cartoon-list hide" id = 'POGO'>
+        <h2 id ='P-heading' class='w-fnont c-heading' >cartoon</h2>
+
+
+            <script>
+
+                for(var j =0;j<pogoChannel.length;j++)
+                {
+
+                  var div = document.createElement("div");
+                  document.querySelector("#POGO #P-heading").after(div);
+                  div.setAttribute("id", "cartoon-list-rapper"+j);
+                  div.classList.add('cartoon-list-rapper');
+
+                  var div = document.createElement("div");
+                  document.querySelector("#POGO #cartoon-list-rapper"+j).appendChild(div);
+                  div.setAttribute("id", "title-arrow-"+j);
+                  div.classList.add('title-arrow-container');
+
+                  var p = document.createElement("p");
+                  p.appendChild(document.createTextNode(pogoChannel[j].name));
+                  p.classList.add('w-fnont');
+                  p.setAttribute("id", "p-"+j);
+                  document.querySelector("#POGO #title-arrow-"+j).appendChild(p);
+
+                  var img = document.createElement("img");
+                  img.setAttribute("id", "arrow-"+j);
+                  img.classList.add('arrow');
+
+                  var ars = "S:"+"\\"+"cartoon"+"\\"+"css"+"\\"+"arrow.jpg";
+                  img.src = ars;
+                  document.querySelector("#POGO #title-arrow-"+j).appendChild(img);
+
+                  var div = document.createElement("div");
+                  document.querySelector("#POGO #title-arrow-"+j).after(div);
+                  div.setAttribute("id", "list-dropdown-"+j);
+                  div.classList.add('list-dropdown');
+                  for(var i =0;i<pogoChannel[j].dy.length;i++)
+                  {
+                    var div = document.createElement("div");
+                    document.querySelector("#POGO #list-dropdown-"+j).appendChild(div);
+                    div.setAttribute("id", "appendDrop-"+i);
+                    div.classList.add('appendDrop');
+
+
+
+                  var p = document.createElement("p");
+                  p.appendChild(document.createTextNode(pogoChannel[j].dy[i].startTime));
+                  p.classList.add('w-fnont');
+                  document.querySelector("#POGO #appendDrop-"+i).appendChild(p);
+
+                  var p = document.createElement("p");
+                  p.appendChild(document.createTextNode(pogoChannel[j].dy[i].endTime));
+                  p.classList.add('w-fnont');
+                  document.querySelector("#POGO #appendDrop-"+i).appendChild(p);
+                }
+              }
+            //  addListenrForArrow();
+
+                  </script>
+
+        </div>
+        <div class="cartoon-list hide" id = "disnep">
+          <h2 id ='D-heading' class='w-fnont c-heading' >cartoon</h2>
+
+
+              <script>
+
+                  for(var j =0;j<disneyChannel.length;j++)
+                  {
+
+                    var div = document.createElement("div");
+                    document.querySelector("#disnep #D-heading").after(div);
+                    div.setAttribute("id", "cartoon-list-rapper"+j);
+                    div.classList.add('cartoon-list-rapper');
+
+                    var div = document.createElement("div");
+                    document.querySelector("#disnep #cartoon-list-rapper"+j).appendChild(div);
+                    div.setAttribute("id", "title-arrow-"+j);
+                    div.classList.add('title-arrow-container');
+
+                    var p = document.createElement("p");
+                    p.appendChild(document.createTextNode(disneyChannel[j].name));
+                    p.classList.add('w-fnont');
+                    p.setAttribute("id", "p-"+j);
+                    document.querySelector("#disnep #title-arrow-"+j).appendChild(p);
+
+                    var img = document.createElement("img");
+                    img.setAttribute("id", "arrow-"+j);
+                    img.classList.add('arrow');
+
+                    var ars = "S:"+"\\"+"cartoon"+"\\"+"css"+"\\"+"arrow.jpg";
+                    img.src = ars;
+                    document.querySelector("#disnep #title-arrow-"+j).appendChild(img);
+
+                    var div = document.createElement("div");
+                    document.querySelector("#disnep #title-arrow-"+j).after(div);
+                    div.setAttribute("id", "list-dropdown-"+j);
+                    div.classList.add('list-dropdown');
+                    for(var i =0;i<disneyChannel[j].dy.length;i++)
+                    {
+                      var div = document.createElement("div");
+                      document.querySelector("#disnep #list-dropdown-"+j).appendChild(div);
+                      div.setAttribute("id", "appendDrop-"+i);
+                      div.classList.add('appendDrop');
+
+
+
+                    var p = document.createElement("p");
+                    p.appendChild(document.createTextNode(disneyChannel[j].dy[i].startTime));
+                    p.classList.add('w-fnont');
+                    document.querySelector("#disnep #appendDrop-"+i).appendChild(p);
+
+                    var p = document.createElement("p");
+                    p.appendChild(document.createTextNode(disneyChannel[j].dy[i].endTime));
+                    p.classList.add('w-fnont');
+                    document.querySelector("#disnep #appendDrop-"+i).appendChild(p);
+                  }
+                }
+              //  addListenrForArrow();
+
+                    </script>
+
+          </div>
+          <div class="cartoon-list hide" id = "chutti">
+            <h2 id ='Ch-heading' class='w-fnont c-heading' >cartoon</h2>
+
+
+                <script>
+
+                    for(var j =0;j<chuttiChannel.length;j++)
+                    {
+
+                      var div = document.createElement("div");
+                      document.querySelector("#chutti #Ch-heading").after(div);
+                      div.setAttribute("id", "cartoon-list-rapper"+j);
+                      div.classList.add('cartoon-list-rapper');
+
+                      var div = document.createElement("div");
+                      document.querySelector("#chutti #cartoon-list-rapper"+j).appendChild(div);
+                      div.setAttribute("id", "title-arrow-"+j);
+                      div.classList.add('title-arrow-container');
+
+                      var p = document.createElement("p");
+                      p.appendChild(document.createTextNode(chuttiChannel[j].name));
+                      p.classList.add('w-fnont');
+                      p.setAttribute("id", "p-"+j);
+                      document.querySelector("#chutti #title-arrow-"+j).appendChild(p);
+
+                      var img = document.createElement("img");
+                      img.setAttribute("id", "arrow-"+j);
+                      img.classList.add('arrow');
+
+                      var ars = "S:"+"\\"+"cartoon"+"\\"+"css"+"\\"+"arrow.jpg";
+                      img.src = ars;
+                      document.querySelector("#chutti #title-arrow-"+j).appendChild(img);
+
+                      var div = document.createElement("div");
+                      document.querySelector("#chutti #title-arrow-"+j).after(div);
+                      div.setAttribute("id", "list-dropdown-"+j);
+                      div.classList.add('list-dropdown');
+                      for(var i =0;i<chuttiChannel[j].dy.length;i++)
+                      {
+                        var div = document.createElement("div");
+                        document.querySelector("#chutti #list-dropdown-"+j).appendChild(div);
+                        div.setAttribute("id", "appendDrop-"+i);
+                        div.classList.add('appendDrop');
+
+
+
+                      var p = document.createElement("p");
+                      p.appendChild(document.createTextNode(chuttiChannel[j].dy[i].startTime));
+                      p.classList.add('w-fnont');
+                      document.querySelector("#chutti #appendDrop-"+i).appendChild(p);
+
+                      var p = document.createElement("p");
+                      p.appendChild(document.createTextNode(chuttiChannel[j].dy[i].endTime));
+                      p.classList.add('w-fnont');
+                      document.querySelector("#chutti #appendDrop-"+i).appendChild(p);
+                    }
+                  }
+                //  addListenrForArrow();
+
+                      </script>
+
+            </div>
+
+            <div class="cartoon-list hide" id = "hungama">
+              <h2 id ='H-heading' class='w-fnont c-heading' >cartoon</h2>
+
+
+                  <script>
+
+                      for(var j =0;j<hungamaChannel.length;j++)
+                      {
+
+                        var div = document.createElement("div");
+                        document.querySelector("#hungama #H-heading").after(div);
+                        div.setAttribute("id", "cartoon-list-rapper"+j);
+                        div.classList.add('cartoon-list-rapper');
+
+                        var div = document.createElement("div");
+                        document.querySelector("#hungama #cartoon-list-rapper"+j).appendChild(div);
+                        div.setAttribute("id", "title-arrow-"+j);
+                        div.classList.add('title-arrow-container');
+
+                        var p = document.createElement("p");
+                        p.appendChild(document.createTextNode(hungamaChannel[j].name));
+                        p.classList.add('w-fnont');
+                        p.setAttribute("id", "p-"+j);
+                        document.querySelector("#hungama #title-arrow-"+j).appendChild(p);
+
+                        var img = document.createElement("img");
+                        img.setAttribute("id", "arrow-"+j);
+                        img.classList.add('arrow');
+
+                        var ars = "S:"+"\\"+"cartoon"+"\\"+"css"+"\\"+"arrow.jpg";
+                        img.src = ars;
+                        document.querySelector("#hungama #title-arrow-"+j).appendChild(img);
+
+                        var div = document.createElement("div");
+                        document.querySelector("#hungama #title-arrow-"+j).after(div);
+                        div.setAttribute("id", "list-dropdown-"+j);
+                        div.classList.add('list-dropdown');
+
+                        for(var i =0;i<hungamaChannel[j].dy.length;i++)
+                        {
+                          var div = document.createElement("div");
+                          document.querySelector("#hungama #list-dropdown-"+j).appendChild(div);
+                          div.setAttribute("id", "appendDrop-"+i);
+                          div.classList.add('appendDrop');
+
+
+
+                        var p = document.createElement("p");
+                        p.appendChild(document.createTextNode(hungamaChannel[j].dy[i].startTime));
+                        p.classList.add('w-fnont');
+                        document.querySelector("#hungama #appendDrop-"+i).appendChild(p);
+
+                        var p = document.createElement("p");
+                        p.appendChild(document.createTextNode(hungamaChannel[j].dy[i].endTime));
+                        p.classList.add('w-fnont');
+                        document.querySelector("#hungama #appendDrop-"+i).appendChild(p);
+                      }
+                    }
+
+
+                        </script>
+
+              </div>
+    </div>
+    <div id="currentShow-container"class="currentShow-container hide">
+
+    <div class="cartoon-list" id = "currentChshwow">
+      <h2 id ='Current-heading' class='w-fnont c-heading' >Current Shows</h2>
+
+
+          <script>
+
+          const cdate = new Date();
+          let hour = cdate.getHours();
+
+          console.log(hour);
+          var currentChannel = [];
+          for(var i=0;i< overallShow.length;i++)
+          { var b = []
+            for(var j=0 ;j< overallShow[i].dy.length;j++)
+            {
+             var hor = overallShow[i].dy[j].startTime.split(':')
+             var chor  = parseInt(hor[0]);
+
+            if(hour == chor)
+            {
+
+            var a = {startTime:overallShow[i].dy[j].startTime,endTime:overallShow[i].dy[j].endTime}
+
+             b.push(a);
+             }
+
+            }
+            console.log(b);
+            var c = {name:overallShow[i].name,dy:b}
+            currentChannel.push(c)
+          }
+          console.log(currentChannel);
+
+              for(var j =0;j<currentChannel.length;j++)
+              {
+
+                var div = document.createElement("div");
+                document.querySelector("#currentChshwow #Current-heading").after(div);
+                div.setAttribute("id", "cartoon-list-rapper"+j);
+                div.classList.add('cartoon-list-rapper');
+
+                var div = document.createElement("div");
+                document.querySelector("#currentChshwow #cartoon-list-rapper"+j).appendChild(div);
+                div.setAttribute("id", "title-arrow-"+j);
+                div.classList.add('title-arrow-container');
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode(currentChannel[j].name));
+                p.classList.add('w-fnont');
+                p.setAttribute("id", "p-"+j);
+                document.querySelector("#currentChshwow #title-arrow-"+j).appendChild(p);
+
+                var img = document.createElement("img");
+                img.setAttribute("id", "arrow-"+j);
+                img.classList.add('arrow');
+
+                var ars = "S:"+"\\"+"cartoon"+"\\"+"css"+"\\"+"arrow.jpg";
+                img.src = ars;
+                document.querySelector("#currentChshwow #title-arrow-"+j).appendChild(img);
+
+                var div = document.createElement("div");
+                document.querySelector("#currentChshwow #title-arrow-"+j).after(div);
+                div.setAttribute("id", "list-dropdown-"+j);
+                div.classList.add('list-dropdown');
+
+                for(var i =0;i<currentChannel[j].dy.length;i++)
+                {
+                  var div = document.createElement("div");
+                  document.querySelector("#currentChshwow #list-dropdown-"+j).appendChild(div);
+                  div.setAttribute("id", "appendDrop-"+i);
+                  div.classList.add('appendDrop');
+
+
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode(currentChannel[j].dy[i].startTime));
+                p.classList.add('w-fnont');
+                document.querySelector("#currentChshwow #appendDrop-"+i).appendChild(p);
+
+                var p = document.createElement("p");
+                p.appendChild(document.createTextNode(currentChannel[j].dy[i].endTime));
+                p.classList.add('w-fnont');
+                document.querySelector("#currentChshwow #appendDrop-"+i).appendChild(p);
+              }
+            }
+
+
+                </script>
+
+      </div>
+        </div>
+  </div>
+    <script type="text/javascript" src = 'S:\cartoon\js\cartoon.js'>
+
+    </script>
+  </body>
+</html>
